@@ -5,21 +5,18 @@ pipeline {
     }
 
     stages {
-        stage('code checkout') {
-            steps {
-                echo 'code checkout'
-            }
-        }
+
 
         stage('build') {
             steps {
-                 echo 'build'
+                sh 'npm install'
             }
         }
 
         stage('unit tests') {
            steps {
                 echo 'unit tests'
+                // sh 'npm test'
            }
         }
 
